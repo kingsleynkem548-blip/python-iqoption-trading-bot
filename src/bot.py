@@ -8,7 +8,7 @@ import time
 
 def wait_for_fresh_candle(iq, pair):
     print(f"Waiting for fresh candle on {pair}...")
-    current_from = iq.get_candles(pair, 60, 1, time.time())[0]["from"]
+    current_from = iq.get_candles(pair, 60, 1, time.time())[0]["from"] 
 
     while True:
         latest_from = iq.get_candles(pair, 60, 1, time.time())[0]["from"]
